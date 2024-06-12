@@ -24,6 +24,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 data-testid="sidebar-toggle"
                 onClick={onToggle}
             >
+                {/* eslint-disable-next-line i18next/no-literal-string */}
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 toggle
             </Button>
             <div className={cls.switchers}>
