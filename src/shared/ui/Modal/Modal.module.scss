@@ -4,10 +4,6 @@
     opacity: 0;
     pointer-events: none;
     z-index: -1;
-    color: var(--primary-color);
-
-    // could use instead timeout
-    transition: 0.3s;
 }
 
 .overlay {

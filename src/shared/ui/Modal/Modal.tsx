@@ -17,8 +17,6 @@ export const Modal = (props: ModalProps) => {
     const {
         className, children, isOpen, onClose,
     } = props;
-    const { t } = useTranslation();
-
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const mods: Record<string, boolean> = {
@@ -28,7 +26,6 @@ export const Modal = (props: ModalProps) => {
 
     const closeHandler = useCallback(() => {
         if (onClose) {
-            onClose();
             setIsClosing(true);
             timerRef.current = setTimeout(() => {
                 onClose();
