@@ -8,5 +8,7 @@
   "Яз": "RU",
   "Войти": "LogIn",
   "Имя пользователя": "Username",
-  "Пароль": "Password"
+  "Пароль": "Password",
+  "Авторизация": "Authorization",
+  "Выйти": "LogOut"
 }
