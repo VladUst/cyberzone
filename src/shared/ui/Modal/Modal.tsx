@@ -1,6 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import React, {
+    MutableRefObject,
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -22,8 +23,8 @@ export const Modal = (props: ModalProps) => {
     const [isMounted, setIsMounted] = useState(false);
     const [isOpening, setIsOpening] = useState(false);
 
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const mods: Record<string, boolean> = {
+    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+    const mods: Mods = {
         [cls.opened]: isOpening,
         [cls.isClosing]: isClosing,
     };
