@@ -11,5 +11,7 @@
   "Имя пользователя": "Username",
   "Пароль": "Password",
   "Авторизация": "Authorization",
-  "Выйти": "LogOut"
+  "Выйти": "LogOut",
+  "Валюта": "Currency",
+  "Страна": "Country"
 }
