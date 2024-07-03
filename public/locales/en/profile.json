@@ -10,5 +10,10 @@
   "Ошибка загрузки профиля": "Profile loading error",
   "Попробуйте обновить страницу": "Try to refresh the page",
   "Логин": "Login",
-  "Аватар": "Avatar"
+  "Аватар": "Avatar",
+  "Ошибка сервера": "Server error",
+  "Нет данных": "No data",
+  "Отстутствуют имя и фамилия": "No name and surname",
+  "Некорректный возраст": "Incorrect age",
+  "Некорректная страна": "Incorrect country"
 }
