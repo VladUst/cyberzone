@@ -7,14 +7,16 @@ import {
 import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
-    counter: CounterSchema
-    user: UserSchema
+    counter: CounterSchema;
+    user: UserSchema;
 
-    loginForm?: LoginSchema
-    profile?: ProfileSchema
-    articleDetails?: ArticleDetailsSchema
+    loginForm?: LoginSchema;
+    profile?: ProfileSchema;
+    articleDetails?: ArticleDetailsSchema;
+    articleDetailsComments?: ArticleDetailsCommentsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

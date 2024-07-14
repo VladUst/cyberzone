@@ -1,4 +1,6 @@
 {
   "Статья не найдена": "Article not found",
-  "Произошла ошибка при загрузке статьи": "Error while loading article"
+  "Произошла ошибка при загрузке статьи": "Error while loading article",
+  "Комментарии": "Comments",
+  "Комментарии отсутствуют": "Comments not found"
 }
