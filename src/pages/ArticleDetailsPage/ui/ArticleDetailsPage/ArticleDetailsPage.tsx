@@ -9,7 +9,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import {
     fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId';
+import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle';
+import { useCallback } from 'react';
+import { AddCommentForm } from 'features/AddComentForm';
 import {
     articleDetailsCommentsReducer,
     getArticleComments,
@@ -35,6 +38,10 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         dispatch(fetchCommentsByArticleId(id));
     });
 
+    const onSendComment = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
+
     if (!id) {
         return (
             <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
@@ -47,6 +54,7 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <ArticleDetails id={id} />
+                <AddCommentForm onSendComment={onSendComment} />
                 <Text className={cls.commentTitle} title={t('Комментарии')} />
                 <CommentList comments={comments} isLoading={commentsIsLoading} />
             </div>
