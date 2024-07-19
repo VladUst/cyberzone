@@ -21,7 +21,7 @@ function App() {
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
-                    <Sidebar />
+                    {inited && <Sidebar />}
                     {inited && <AppRouter />}
                 </div>
             </Suspense>
