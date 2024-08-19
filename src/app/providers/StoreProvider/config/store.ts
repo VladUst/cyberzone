@@ -1,11 +1,12 @@
 import {
     CombinedState, configureStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
-import { createReducerManager } from 'app/providers/StoreProvider/config/reducerManager';
 import { $api } from 'shared/api/api';
+import { uiReducer } from 'widgets/Page/model/slices/UISlice';
+import { createReducerManager } from './reducerManager';
+import { StateSchema } from './StateSchema';
 
 export function createReduxStore(
     initialState: StateSchema,
@@ -15,6 +16,7 @@ export function createReduxStore(
         ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
+        ui: uiReducer,
     };
     const reducerManager = createReducerManager(rootReducers);
     const store = configureStore({
