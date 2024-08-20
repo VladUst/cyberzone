@@ -5,8 +5,8 @@ import { Page } from 'widgets/Page';
 export const AboutPage = () => {
     const { t } = useTranslation('about');
     return (
-        <Page>
+        <section>
             {t('О сайте')}
-        </Page>
+        </section>
     );
 };

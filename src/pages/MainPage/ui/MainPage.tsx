@@ -5,9 +5,9 @@ import { Page } from 'widgets/Page';
 const MainPage = () => {
     const { t } = useTranslation('main');
     return (
-        <Page>
+        <section>
             {t('Главная страница')}
-        </Page>
+        </section>
     );
 };
 
