@@ -18,6 +18,5 @@ export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [StoreDecorator({
     articlesPage: {
-
     },
 })];
