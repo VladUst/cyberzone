@@ -5,12 +5,12 @@ import {
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useLocation } from 'react-router-dom';
-import { uiActions } from 'widgets/Page/model/slices/UISlice';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getUIScrollByPath } from 'widgets/Page/model/selectors/ui';
 import { useThrottle } from 'shared/lib/hooks/useThrottle';
+import { getUIScrollByPath } from '../model/selectors/ui';
+import { uiActions } from '../model/slices/UISlice';
 import cls from './Page.module.scss';
 
 interface PageProps {
