@@ -2,7 +2,6 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import { Primary } from 'pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.stories';
 import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
 export default {
