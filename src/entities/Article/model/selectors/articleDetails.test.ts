@@ -1,3 +1,4 @@
+import 'whatwg-fetch';
 import { StateSchema } from 'app/providers/StoreProvider';
 import {
     getArticleDetailsData,

@@ -1,3 +1,4 @@
+import 'whatwg-fetch';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { ValidateProfileError } from '../types/editableProfileCardSchema';
