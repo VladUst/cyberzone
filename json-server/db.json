@@ -43,14 +43,21 @@
       "username": "admin",
       "password": "123",
       "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
-      "role": "ADMIN"
+      "roles": ["ADMIN"]
     },
     {
       "id": "2",
       "username": "alex",
       "password": "123",
       "avatar": "https://koshka.top/uploads/posts/2021-12/1638836285_12-koshka-top-p-rizhaya-koshka-na-avatarku-12.jpg",
-      "role": "USER"
+      "roles": ["USER"]
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "avatar": "https://koshka.top/uploads/posts/2021-12/1638836285_12-koshka-top-p-rizhaya-koshka-na-avatarku-12.jpg",
+      "roles": ["MANAGER"]
     }
   ],
   "articles": [
