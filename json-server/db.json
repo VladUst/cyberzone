@@ -77,21 +77,27 @@
       "username": "admin",
       "password": "123",
       "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
-      "roles": ["ADMIN"]
+      "roles": [
+        "ADMIN"
+      ]
     },
     {
       "id": "2",
       "username": "alex",
       "password": "123",
       "avatar": "https://koshka.top/uploads/posts/2021-12/1638836285_12-koshka-top-p-rizhaya-koshka-na-avatarku-12.jpg",
-      "roles": ["USER"]
+      "roles": [
+        "USER"
+      ]
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
       "avatar": "https://koshka.top/uploads/posts/2021-12/1638836285_12-koshka-top-p-rizhaya-koshka-na-avatarku-12.jpg",
-      "roles": ["MANAGER"]
+      "roles": [
+        "MANAGER"
+      ]
     }
   ],
   "articles": [
@@ -670,6 +676,73 @@
       "city": "New York",
       "username": "alex",
       "avatar": "https://koshka.top/uploads/posts/2021-12/1638836285_12-koshka-top-p-rizhaya-koshka-na-avatarku-12.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "отстой",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 5,
+      "feedback": "Отлично!",
+      "id": "5t5SFXE"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }
