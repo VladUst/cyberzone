@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
-import { Normal } from '@/pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetailsPage.stories';
 import { ArticlesPage } from './ArticlesPage';
 
 export default {
