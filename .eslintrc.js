@@ -55,7 +55,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'warn',
         'arrow-body-style': 'off',
-        'fsd-refactor/path-checker': 'error',
+        'fsd-refactor/path-checker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
