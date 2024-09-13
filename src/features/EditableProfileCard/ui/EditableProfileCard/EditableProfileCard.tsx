@@ -1,24 +1,26 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
-import { Currency } from '@/entities/Currency';
-import { Country } from '@/entities/Country';
-import { Text, TextTheme } from '@/shared/ui/Text';
-import { ProfileCard } from '@/entities/Profile';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader';
-import { VStack } from '@/shared/ui/Stack';
+
 import { ValidateProfileError } from '../../model/consts/consts';
+import { getProfileError } from '../../model/selectors/getProfileError';
 import { getProfileForm } from '../../model/selectors/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading';
-import { getProfileError } from '../../model/selectors/getProfileError';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly';
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors';
 import { fetchProfileData } from '../../model/services/fetchProfileData';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
+
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { ProfileCard } from '@/entities/Profile';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
+import { VStack } from '@/shared/ui/Stack';
+import { Text, TextTheme } from '@/shared/ui/Text';
 
 interface EditableProfileCardProps {
     className?: string;

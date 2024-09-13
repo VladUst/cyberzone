@@ -1,8 +1,11 @@
 import React, { memo, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 import { AppRoutesProps, routeConfig } from '../config/routeConfig';
-import { PageLoader } from '@/widgets/PageLoader';
+
 import { RequireAuth } from './RequireAuth';
+
+import { PageLoader } from '@/widgets/PageLoader';
 
 const renderWithWrapper = (route: AppRoutesProps) => {
     const element = (

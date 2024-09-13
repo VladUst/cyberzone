@@ -1,8 +1,9 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+
+import { ArticlesInfiniteList } from './ArticlesInfiniteList';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
-import { ArticlesInfiniteList } from './ArticlesInfiniteList';
 
 export default {
     title: 'pages/ArticlesPage/ArticlesInfiniteList',

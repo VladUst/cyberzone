@@ -1,19 +1,22 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Input } from '@/shared/ui/Input';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Text, TextTheme } from '@/shared/ui/Text';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+
+import { getLoginError } from '../../model/selectors/getLoginError';
+import { getLoginLoading } from '../../model/selectors/getLoginLoading';
+import { getLoginPassword } from '../../model/selectors/getLoginPassword';
+import { getLoginUsername } from '../../model/selectors/getLoginUsername';
 import { loginByUsername } from '../../model/services/loginByUsername';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
+
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Input } from '@/shared/ui/Input';
+import { Text, TextTheme } from '@/shared/ui/Text';
+
 import cls from './LoginForm.module.scss';
-import { getLoginUsername } from '../../model/selectors/getLoginUsername';
-import { getLoginPassword } from '../../model/selectors/getLoginPassword';
-import { getLoginLoading } from '../../model/selectors/getLoginLoading';
-import { getLoginError } from '../../model/selectors/getLoginError';
 
 export interface LoginFormProps {
     className?: string

@@ -1,10 +1,11 @@
 import 'whatwg-fetch';
-import { StateSchema } from '@/app/providers/StoreProvider';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from './articleDetails';
+
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 describe('articleDetails.test', () => {
     test('should return data', () => {

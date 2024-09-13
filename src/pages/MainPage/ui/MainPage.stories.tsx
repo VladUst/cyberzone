@@ -1,8 +1,9 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+import React from 'react';
+
 import MainPage from './MainPage';
+
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 
 export default {
     title: 'pages/MainPage',
