@@ -7,7 +7,7 @@ import {
 } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/AvatarDropdown';
-import { NotificationButton } from '@/features/NotoficationButton';
+import { NotificationButton } from '@/features/NotificationButton';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
