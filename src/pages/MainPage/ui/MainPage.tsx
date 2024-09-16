@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 const MainPage = () => {
     const { t } = useTranslation('main');
     return (
-        <section>
+        <section data-testid="MainPage">
             {t('Главная страница')}
         </section>
     );

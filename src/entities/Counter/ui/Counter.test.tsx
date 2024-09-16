@@ -1,3 +1,4 @@
+import 'whatwg-fetch';
 import { userEvent } from '@storybook/testing-library';
 import { screen } from '@testing-library/react';
 
