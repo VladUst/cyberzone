@@ -12,15 +12,15 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 jobs:
-  build-and-ui-testing:
-    runs-on: ubuntu-latest
+  build-and-testing:
+    runs-on: windows-2019
     concurrency: ci-${{ github.ref }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 16.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -38,8 +38,14 @@ jobs:
       - name: screenshot testing
         run: npm run test:ui:ci
         if: always()
+      - name: unit testing
+        if: always()
+        run: npm run test:unit
       - name: Generate HTML report
         run: npm run test:ui:report
+        if: always()
+      - name: move loki
+        run: mv .loki reports/
         if: always()
       - name: Setup Pages
         uses: actions/configure-pages@v2
@@ -48,13 +54,13 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         if: always()
         with:
-          path: '.loki'
+          path: 'reports'
       - name: Deploy to GitHub Pages
         id: deployment
         if: always()
         uses: actions/deploy-pages@v1
 
-  linting-and-unit-testing:
+  linting:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -72,6 +78,3 @@ jobs:
         if: always()
       - name: linting css
         run: npm run lint:scss
-      - name: unit testing
-        if: always()
-        run: npm run test:unit
